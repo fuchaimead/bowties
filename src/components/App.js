@@ -7,6 +7,7 @@ import Tenugui from './Tenugui';
 import Aloha from './Aloha';
 import About from './About';
 import '../App.css'
+import banner from '../images/banner.jpg'
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
         <Navbar />
         <div className="clear"></div>
         <div className="push"></div>
+        <img src={banner} alt='banner image' /> 
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/tenugui' component={Tenugui} />
