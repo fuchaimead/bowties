@@ -67,3 +67,38 @@ body {
   height: 50px;
   margin-top: 10px;
 }
+
+.masthead {
+  max-width: 100%;
+  height: auto;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.sidearea {
+  border-bottom: 1px solid #ccc;
+}
+
+aside {
+  background: white;
+  float: left;
+  padding: 20px;
+}
+
+
+.callout {
+  padding: 20px 0;
+}
+
+.item {
+  border-radius: 5px;
+  padding: 20px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
