@@ -54,6 +54,7 @@ body {
   height: 100%;
   margin: 0;
 }
+
 .clear {
   clear: both;
 }
@@ -74,7 +75,10 @@ body {
   color: white;
   position: relative;
   overflow: hidden;
-  margin: 10px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .sidearea {
@@ -101,4 +105,19 @@ aside {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+img {
+  width: 75%;
+}
+
+.image {
+  background: url(./images/ocean.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
+.padding {
+  padding: 0% 10% 50% 10% ; 
 }

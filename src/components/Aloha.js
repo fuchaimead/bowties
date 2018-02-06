@@ -5,7 +5,7 @@ class Aloha extends React.Component {
   render() {
     return(
       <div>
-           <Sidebar /> 
+      <Sidebar /> 
         this is the Aloha Component
       </div>
     )

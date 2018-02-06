@@ -13,33 +13,28 @@ import banner from '../images/banner.jpg'
 class App extends Component {
   render() {
     return (
-      <div> 
-      <div style={styles.image}>
+      <div className="image">
       <div className="wrapper">
         <Navbar />
-        <img src={banner} className='masthead' alt='banner' /> 
-        <div className="clear"></div>
-        <div className="push"></div>
+        {/* <img src={banner} className='masthead' alt='banner' />  */}
+        <div className="padding"> 
           <Switch>
-            {/* <Route exact path='/' component={Home} /> */}
+            <Route exact path='/' component={Home} />
             <Route exact path='/tenugui' component={Home} />
             <Route exact path='/aloha' component={Aloha} />
             <Route exact path='/about' component={About} />
             <Route component={NoMatch} />
           </Switch>
-      </div>
+        </div>
+        <div className="clear"></div>
+        <div className="push"></div>
       </div> 
       </div>
     );
   }
 }
 
-const styles = {
-  image :{
-    backgroundImage: "url("+ ocean + ")",
-    backgroundSize: 'cover'
-  }
-}
+
 
 export default App;
 
