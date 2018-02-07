@@ -77,7 +77,11 @@ class Home extends React.Component {
       return (
       <div className='item' key={i}>
        <p> {product.name} </p> 
+       <br /> 
        <img src={product.img} alt={product.name}/>
+       <br />
+       <p> ${product.price} </p>
+       <button className="add" > Add Item </button>
       </div> 
       )
       }
@@ -86,7 +90,7 @@ class Home extends React.Component {
 
   render() {
     return(
-      <div> 
+      <div className="padding"> 
       <div> 
       <h1>  TENUGUI COLLECTION </h1> 
       </div>

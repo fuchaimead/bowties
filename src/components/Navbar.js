@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import '../App.css'
 
 class Navbar extends React.Component {
@@ -20,9 +20,9 @@ class Navbar extends React.Component {
         </Link>
       </svg>
          <ul>
-          <Link to="/tenugui"><li> Tenugui </li></Link>
-          <Link to="/aloha"><li>Aloha</li></Link>
-          <Link to="/about"><li>About</li></Link>
+          <NavLink to="/tenugui" activeClassName='active'><li> Tenugui </li></NavLink>
+          <NavLink to="/aloha" activeClassName='active'><li>Aloha</li></NavLink>
+          <NavLink to="/about" activeClassName='active'><li>About</li></NavLink>
         </ul>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-labelledby="shopicon" role="presentation" width="30" height="30">
               <title id="cart">

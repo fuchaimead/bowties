@@ -24,12 +24,16 @@ li {
   padding: 0 50px;
 }
 
-a,
-a:visited,
-a:active {
-  text-decoration: none;
+ a {
   color: black;
+  text-decoration: none;
 }
+
+.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 .cartitem {
   position: relative;
   float: right;
@@ -119,5 +123,23 @@ img {
 }
 
 .padding {
-  padding: 5% 10% 50% 10% ; 
+  padding: 5% 10% 70% 10% ; 
+}
+
+
+button:hover {
+  background: #3e64ea;
+  color: white;
+  transition: 0.2s all ease-in;
+}
+
+.max {
+  font-size: 12px;
+  float: right;
+  color: #565656;
+}
+.min {
+  float: left;
+  font-size: 12px;
+  color: #565656;
 }
