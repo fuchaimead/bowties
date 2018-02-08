@@ -10,14 +10,14 @@ import red_emblem from './images/red_emblem.jpg'
 import red_floral from './images/red_floral.jpg'
 import peony_aloha_shirt from './images/peony_aloha_shirt.jpg'
 import yellow_leaves from './images/yellow_leaves.jpg'
-// import alphabet from './images/alphabet.jpg'
-// import asanoha from './images/asanoha.jpg'
-// import hamachidori from './images/hamachidori.jpg'
-// import hyotan_gourd from './images/hyotan_gourd.jpg'
-// import mameshibori from './images/mameshibori.jpg'
-// import orizuru from './images/orizuru.jpg'
-// import samehada from './images/samehada.jpg'
-// import seigaiha from './images/seigaiha.jpg'
+import alphabet from './images/alphabet.jpg'
+import asanoha from './images/asanoha.jpg'
+import hamachidori from './images/hamachidori.jpg'
+import hyotan_gourd from './images/hyotan_gourd.jpg'
+import mameshibori from './images/mameshibori.jpg'
+import orizuru from './images/orizuru.jpg'
+import samehada from './images/samehada.jpg'
+import seigaiha from './images/seigaiha.jpg'
 
 const enhancers = compose(
   applyMiddleware(thunk),
@@ -92,63 +92,63 @@ const store = createStore(rootReducer, { cartTotal: 0,
       sale: true,
       img: yellow_leaves
     },
-    // {
-    //   name: 'Alphabet Pattern',
-    //   price: 129.99,
-    //   category: 'tenugui',
-    //   sale: false,
-    //   article: 'jacket',
-    //   img: alphabet
-    // },
-    // {
-    //   name: 'Asanoha Hemp Leaf Pattern',
-    //   price: 80.99,
-    //   category: 'tenugui',
-    //   sale: false,
-    //   img: asanoha
-    // },
-    // {
-    //   name: 'Hamachidori Birds on the Shore Pattern',
-    //   price: 59.99,
-    //   category: 'tenugui',
-    //   sale: false,
-    //   img: hamachidori
-    // },
-    // {
-    //   name: 'Hyotan Gourd Pattern',
-    //   price: 59.99,
-    //   category: 'tenugui',
-    //   sale: true,
-    //   img: hyotan_gourd
-    // },
-    // {
-    //   name: 'Mameshibori Pea-Dot Pattern',
-    //   price: 59.99,
-    //   category: 'tenugui',
-    //   sale: false,
-    //   img: mameshibori
-    // },
-    // {
-    //   name: 'Orizuru Origami Crane Pattern',
-    //   price: 59.99,
-    //   category: 'tenugui',
-    //   sale: false,
-    //   img: orizuru
-    // },
-    // {
-    //   name: 'Samehada Shark Skin Pattern',
-    //   price: 59.99,
-    //   category: 'tenugui',
-    //   sale: true,
-    //   img: samehada
-    // },
-    // {
-    //   name: 'Seigaiha Wave Pattern',
-    //   price: 59.99,
-    //   category: 'tenugui',
-    //   sale: false,
-    //   img: seigaiha
-    // },
+    {
+      name: 'Alphabet Pattern',
+      price: 129.99,
+      category: 'tenugui',
+      sale: false,
+      article: 'jacket',
+      img: alphabet
+    },
+    {
+      name: 'Asanoha Hemp Leaf Pattern',
+      price: 80.99,
+      category: 'tenugui',
+      sale: false,
+      img: asanoha
+    },
+    {
+      name: 'Hamachidori Birds on the Shore Pattern',
+      price: 59.99,
+      category: 'tenugui',
+      sale: false,
+      img: hamachidori
+    },
+    {
+      name: 'Hyotan Gourd Pattern',
+      price: 59.99,
+      category: 'tenugui',
+      sale: true,
+      img: hyotan_gourd
+    },
+    {
+      name: 'Mameshibori Pea-Dot Pattern',
+      price: 59.99,
+      category: 'tenugui',
+      sale: false,
+      img: mameshibori
+    },
+    {
+      name: 'Orizuru Origami Crane Pattern',
+      price: 59.99,
+      category: 'tenugui',
+      sale: false,
+      img: orizuru
+    },
+    {
+      name: 'Samehada Shark Skin Pattern',
+      price: 59.99,
+      category: 'tenugui',
+      sale: true,
+      img: samehada
+    },
+    {
+      name: 'Seigaiha Wave Pattern',
+      price: 59.99,
+      category: 'tenugui',
+      sale: false,
+      img: seigaiha
+    },
   ]
 
 

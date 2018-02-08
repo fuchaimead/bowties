@@ -7,6 +7,7 @@ class Aloha extends React.Component {
 
   displayProducts = () =>{
     return this.props.products.map( (product, i) => {
+      if (product.category == "aloha")
         return (
           <div className='item' key={i}>
           <p> {product.name} </p> 

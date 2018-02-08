@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux'
 import Sidebar from './Sidebar';
 import alphabet from '../images/alphabet.jpg'
 import asanoha from '../images/asanoha.jpg'
@@ -11,69 +12,11 @@ import seigaiha from '../images/seigaiha.jpg'
 
 
 class Home extends React.Component {
-  state = { products: [
-    {
-            name: 'Alphabet Pattern',
-            price: 129.99,
-            category: 'tenugui',
-            sale: false,
-            article: 'jacket',
-            img: alphabet
-          },
-          {
-            name: 'Asanoha Hemp Leaf Pattern',
-            price: 80.99,
-            category: 'tenugui',
-            sale: false,
-            img: asanoha
-          },
-          {
-            name: 'Hamachidori Birds on the Shore Pattern',
-            price: 59.99,
-            category: 'tenugui',
-            sale: false,
-            img: hamachidori
-          },
-          {
-            name: 'Hyotan Gourd Pattern',
-            price: 59.99,
-            category: 'tenugui',
-            sale: true,
-            img: hyotan_gourd
-          },
-          {
-            name: 'Mameshibori Pea-Dot Pattern',
-            price: 59.99,
-            category: 'tenugui',
-            sale: false,
-            img: mameshibori
-          },
-          {
-            name: 'Orizuru Origami Crane Pattern',
-            price: 59.99,
-            category: 'tenugui',
-            sale: false,
-            img: orizuru
-          },
-          {
-            name: 'Samehada Shark Skin Pattern',
-            price: 59.99,
-            category: 'tenugui',
-            sale: true,
-            img: samehada
-          },
-          {
-            name: 'Seigaiha Wave Pattern',
-            price: 59.99,
-            category: 'tenugui',
-            sale: false,
-            img: seigaiha
-          },
-        ]
-  }
+
 
   displayProducts = () =>{
-    return this.state.products.map( (product, i) => {
+    return this.props.products.map( (product, i) => {
+      if (product.category == "tenugui")
       return (
       <div className='item' key={i}>
        <p> {product.name} </p> 
@@ -103,5 +46,10 @@ class Home extends React.Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+     products: state.products
+  }
+}
 
-export default Home
+export default connect(mapStateToProps)(Home)
