@@ -2,16 +2,17 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 class Sidebar extends React.Component {
-  state = { pricerange: 300, min: 0, max: 400 }
+  state = { pricerange: 300 }
 
 
-  handleChange = (e, { name, value }) => {
+  handleChange = (e) => {
+    const { name, value } = e.target
     this.setState({ [name]: value })
-    this.props.dispatch({ type: 'SET_COST_FILTER', cost: this.state.duration  })
+    this.props.dispatch({ type: 'SET_PRICE_FILTER', price: this.state.pricerange })
   }
 
   render(){
-    const { pricerange, min, max } = this.state
+    const { pricerange } = this.state
     return(
       <aside>
       <label>Highest Price: <span>${pricerange}</span></label>
@@ -21,8 +22,8 @@ class Sidebar extends React.Component {
         name="pricerange"
         value={pricerange}
         type="range"
-        min={min}
-        max={max} 
+        min={0}
+        max={400} 
         step="0.1" 
         onChange={this.handleChange}
       />
@@ -44,7 +45,8 @@ class Sidebar extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    filter: state.searchProps
+    filter: state.searchProps, 
+    cost: state.costFilter
   }
 }
 

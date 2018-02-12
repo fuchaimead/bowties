@@ -2,7 +2,7 @@ import { combineReducers } from 'redux'
 import flash from './flash'
 import products from './products'
 import searchProps from './searchProps'
-import costFilter from './costFilter'
+import priceFilter from './priceFilter'
 import currentPath from './currentPath'
 import cart from './cart'
 
@@ -11,7 +11,7 @@ const rootReducer = combineReducers({
   flash,
   products,
   searchProps,
-  costFilter,
+  priceFilter,
   currentPath,
   cart,
 })
