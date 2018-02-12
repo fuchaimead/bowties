@@ -48,7 +48,6 @@ class Aloha extends React.Component {
 const mapStateToProps = (state) => {
   return {
      products: state.products, 
-     filter: state.searchProps,   
      price: state.priceFilter
   }
 }
