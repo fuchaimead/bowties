@@ -34,63 +34,72 @@ const store = createStore(rootReducer, { cartTotal: 0,
       price: 149.99,
       category: 'aloha',
       sale: true,
-      img: blue_monstera
+      img: blue_monstera,
+      id: 1
     },
     {
       name: 'Blue Seabirds and Fish Aloha Shirt',
       price: 39.99,
       category: 'aloha',
       sale: false,
-      img: blue_seabirds
+      img: blue_seabirds,
+      id: 2
     },
     {
       name: 'Brown Palm Tree Aloha Shirt',
       price: 49.99,
       category: 'aloha',
       sale: true,
-      img: brown_palm_tree
+      img: brown_palm_tree,
+      id: 3
     },
     {
       name: 'Green Island Floral Aloha',
       price: 12.99,
       category: 'aloha',
       sale: true,
-      img: green_island_floral
+      img: green_island_floral,
+      id: 4
     },
     {
       name: 'Red Abstract Floral Aloha',
       price: 29.99,
       category: 'aloha',
       sale: false,
-      img: red_abstract_floral
+      img: red_abstract_floral,
+      id: 5
     },
     {
       name: 'Red Emblem Aloha Shirt',
       price: 18.99,
       category: 'aloha',
       sale: false,
-      img: red_emblem
+      img: red_emblem,
+      id: 6
     },
     {
       name: 'Red Floral Aloha Shirt',
       price: 28.99,
       category: 'aloha',
       sale: false,
-      img: red_floral
+      img: red_floral,
+      id: 7
     },
     {
       name: 'Red Peony Aloha Shirt',
       price: 49.99,
       category: 'aloha',
       sale: false,
-      img: peony_aloha_shirt
+      img: peony_aloha_shirt,
+      id: 8
     },
     {
       name: 'Yellow Leaves Aloha',
       price: 59.99,
       category: 'aloha',
       sale: true,
-      img: yellow_leaves
+      img: yellow_leaves,
+      id: 9
     },
     {
       name: 'Alphabet Pattern',
@@ -98,56 +107,64 @@ const store = createStore(rootReducer, { cartTotal: 0,
       category: 'tenugui',
       sale: false,
       article: 'jacket',
-      img: alphabet
+      img: alphabet,
+      id: 10
     },
     {
       name: 'Asanoha Hemp Leaf Pattern',
       price: 80.99,
       category: 'tenugui',
       sale: false,
-      img: asanoha
+      img: asanoha,
+      id: 11
     },
     {
       name: 'Hamachidori Birds on the Shore Pattern',
       price: 59.99,
       category: 'tenugui',
       sale: false,
-      img: hamachidori
+      img: hamachidori,
+      id: 12
     },
     {
       name: 'Hyotan Gourd Pattern',
       price: 59.99,
       category: 'tenugui',
       sale: true,
-      img: hyotan_gourd
+      img: hyotan_gourd,
+      id: 13
     },
     {
       name: 'Mameshibori Pea-Dot Pattern',
       price: 59.99,
       category: 'tenugui',
       sale: false,
-      img: mameshibori
+      img: mameshibori,
+      id: 14
     },
     {
       name: 'Orizuru Origami Crane Pattern',
       price: 59.99,
       category: 'tenugui',
       sale: false,
-      img: orizuru
+      img: orizuru,
+      id: 15
     },
     {
       name: 'Samehada Shark Skin Pattern',
       price: 59.99,
       category: 'tenugui',
       sale: true,
-      img: samehada
+      img: samehada,
+      id: 16
     },
     {
       name: 'Seigaiha Wave Pattern',
       price: 59.99,
       category: 'tenugui',
       sale: false,
-      img: seigaiha
+      img: seigaiha,
+      id: 17
     },
   ]
 

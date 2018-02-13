@@ -11,6 +11,11 @@ class Sidebar extends React.Component {
     this.props.dispatch({ type: 'SET_PRICE_FILTER', price: this.state.pricerange })
   }
 
+  handleToggle = () => {
+    this.props.dispatch({ type: 'ADD_SEARCH_FILTER', sale: !this.props.filter})
+  }
+
+
   render(){
     const { pricerange } = this.state
     return(
@@ -20,12 +25,12 @@ class Sidebar extends React.Component {
         <input 
         className="slider" 
         name="pricerange"
-        value={pricerange}
+        value={ pricerange }
         type="range"
         min={0}
         max={400} 
         step="0.1" 
-        onChange={this.handleChange}
+        onChange={ this.handleChange }
       />
         <span className="min">${ this.state.min }</span>
         <span className="max">${ this.state.max }</span>
@@ -34,7 +39,9 @@ class Sidebar extends React.Component {
         <h4>Only Show Sale Items</h4>
         <br />
         <label className="switch">
-          <input type="checkbox" />
+          <input type="checkbox" 
+             onChange={ this.handleToggle }
+             checked={ this.props.filter } />
          <span className="toggle round" data-checked="Yes" data-unchecked="No"></span>
         </label>
       </div>
@@ -54,7 +61,7 @@ class Sidebar extends React.Component {
 const mapStateToProps = (state) => {
   return {
     filter: state.searchProps, 
-    cost: state.costFilter
+    cost: state.costFilter,
   }
 }
 

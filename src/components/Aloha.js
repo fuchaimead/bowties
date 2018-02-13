@@ -4,22 +4,26 @@ import { connect } from 'react-redux'
 
 class Aloha extends React.Component {
 
+  addToCart = (productId) => {
+    this.props.dispatch({ type: 'ADD_TO_CART', item: this.props })
+    debugger
+  }
 
   displayProducts = () =>{
     const { price, products } = this.props
     let visible = products
     if(price)
     visible = visible.filter( p => p.price < price)
-    return visible.map( (product, i) => {
+    return visible.map( product => {
       if (product.category === "aloha"){
           return (
-            <div className='item' key={i}>
-            <p> {product.name} </p> 
+            <div className='item' key={product.id}>
+            <p> { product.name } </p> 
             <br />
-            <img src={product.img} alt={product.name}/>
+            <img src={ product.img } alt={ product.name }/>
             <br />
             <p> ${product.price} </p>
-            <button className="add" > Add Item </button>
+            <button className="add" onClick={ () => this.addToCart(product.id) }> Add Item </button>
           </div> 
           )   
         } else {
