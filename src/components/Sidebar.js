@@ -31,6 +31,14 @@ class Sidebar extends React.Component {
         <span className="max">${ this.state.max }</span>
       </div> 
       <div className="sidearea callout">
+        <h4>Only Show Sale Items</h4>
+        <br />
+        <label className="switch">
+          <input type="checkbox" />
+         <span className="toggle round" data-checked="Yes" data-unchecked="No"></span>
+        </label>
+      </div>
+      <div className="sidearea callout">
       <h4>Special Sale!</h4>
       <p>Shop now because half our items are greatly reduced</p>
       </div>
