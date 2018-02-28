@@ -5,8 +5,7 @@ import { connect } from 'react-redux'
 class Aloha extends React.Component {
 
   addToCart = (productId) => {
-    this.props.dispatch({ type: 'ADD_TO_CART', item: this.props })
-    debugger
+    this.props.dispatch({ type: 'ADD_TO_CART', item: this.props.products[productId] })
   }
 
   displayProducts = () =>{

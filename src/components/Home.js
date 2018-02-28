@@ -6,7 +6,6 @@ import Sidebar from './Sidebar';
 class Home extends React.Component {
   
   addToCart = (productId) => {
-    debugger
     this.props.dispatch({ type: 'ADD_TO_CART', item: this.props.products[productId] })
   }
 
