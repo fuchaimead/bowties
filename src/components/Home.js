@@ -11,10 +11,11 @@ class Home extends React.Component {
   }
 
   displayProducts = () =>{
-    const { price, products } = this.props
+    const { price, products, filter } = this.props
     let visible = products
-    // case 'sale':
-    //     sale = products.filter( p => p.sale == true )
+    if(filter === true){
+      visible = visible.filter( p => p.sale === false )
+    }
     if(price)
     visible = visible.filter( p => p.price < price)
     return visible.map( product => {
@@ -54,7 +55,8 @@ class Home extends React.Component {
 const mapStateToProps = (state) => {
   return {
      products: state.products,
-     price: state.priceFilter
+     price: state.priceFilter,
+     filter: state.searchProps
   }
 }
 

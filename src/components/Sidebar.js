@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 class Sidebar extends React.Component {
-  state = { pricerange: 300 }
+  state = { pricerange: 300, sale: false }
 
 
   handleChange = (e) => {
