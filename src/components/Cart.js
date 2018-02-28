@@ -3,37 +3,38 @@ import { connect } from 'react-redux'
 
 
 class Cart extends React.Component{
-  // state = { visible: [] }
+  state = { visible: [] }
 
-  // mapProducts = (visible) => {
-  //   const { products } = this.props
-  //   return products.map(product => {
-  //     return(
-  //       <div key={product.id}>
-  //       <div className='item' key={product.id}>
-  //         <p> {product.name} </p> 
-  //         <br /> 
-  //         <img src={product.img} alt={product.name}/>
-  //         <br />
-  //         <p> ${product.price} </p>
-  //         </div> 
-  //       </div>
-  //     )
-  //   })
-  // }
+  mapProducts = (visible) => {
+    return visible.map(item => {
+      return(
+        <div key={item.id}>
+        <div className='item' key={item.id}>
+         <p> {item.name} </p> 
+         <br /> 
+         <img src={item.img} alt={item.name}/>
+         <br />
+         <p> ${item.price} </p>
+         </div> 
+       </div>
+      )
+    })  
+  }
 
   render(){
+    const { cart } = this.props
     return(
       <div className="padding"> 
       <div> Here is the Shopping Cart </div> 
-        {/* { this.mapProducts() } */}
+      { this.mapProducts(cart) }
       </div>
     )
   }
 }
 
 const mapStateToProps = (state) => {
-  return { cart: state.cart}
+  return { cart: state.cart }
 }
+
 export default connect(mapStateToProps)(Cart)
 
