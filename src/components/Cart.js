@@ -12,7 +12,7 @@ class Cart extends React.Component{
         <div className='item' key={ item.id }>
          <p> { item.name } </p> 
          <br /> 
-         <img src={item.img} alt={ item.name }/>
+         <img src={ item.img } alt={ item.name }/>
          <br />
          <p> ${ item.price } </p>
          </div> 
@@ -41,7 +41,7 @@ class Cart extends React.Component{
           <h1>SHOPPING CART</h1> 
       </div>
       <div className='content'> 
-      { cart.length !== 0 ? this.mapProducts(cart) : this.cartIsEmpty()}
+      { (Object.keys(cart).length === 0 && cart.constructor === Object) ?  this.cartIsEmpty() : this.mapProducts(cart) }
       </div>
       </div>
     )
